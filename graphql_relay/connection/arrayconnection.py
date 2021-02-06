@@ -99,7 +99,8 @@ def connection_from_list_slice(list_slice, args=None, connection_type=None,
             start_cursor=first_edge_cursor,
             end_cursor=last_edge_cursor,
             has_previous_page=isinstance(last, int) and start_offset > lower_bound,
-            has_next_page=isinstance(first, int) and end_offset < upper_bound
+            has_next_page=isinstance(first, int) and end_offset < upper_bound,
+            total_count=list_length
         )
     )
 
